@@ -1,0 +1,14 @@
+<div id = "test"></div>
+
+<script>
+data = []
+window.addEventListener("devicemotion", motion, false);
+function motion(event){
+  data.push(""
+    + event.accelerationIncludingGravity.x + "|"
+    + event.accelerationIncludingGravity.y + "|"
+    + event.accelerationIncludingGravity.z
+  );
+  document.getElementById('test').textContent = data.toString()
+}
+</script>
